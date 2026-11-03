@@ -1,0 +1,100 @@
+{
+  "total_rows": 7728394,
+  "sample_rows": 399999,
+  "date_range": [
+    "2016-01-14",
+    "2023-03-31"
+  ],
+  "raw_size_gb": 3.06,
+  "gps": {
+    "missing_before": 176088,
+    "recovered": 0,
+    "dropped": 0
+  },
+  "gps_text": "no Start GPS was missing; 176,088 End coordinates (44.1% of 399,581 records) were imputed from the Start point.",
+  "top_hotspots": [
+    {
+      "label": "Los Angeles, CA",
+      "count": 50254
+    },
+    {
+      "label": "Miami, FL",
+      "count": 42955
+    },
+    {
+      "label": "Charlotte, NC",
+      "count": 36259
+    },
+    {
+      "label": "Baton Rouge, LA",
+      "count": 33612
+    }
+  ],
+  "weather_insight": "Rain has the highest severe share (22.9%), Fog/Haze the lowest (15.8%); weak link (Cramér's V = 0.039).",
+  "time_insight": "Peak hours are 07:00 and 16:00; a weekend day averages 53% fewer accidents than a weekday.",
+  "correlation_insight": "Start_Lng, City and Start_Lat lead the permutation importance; Year excluded as a collection artifact.",
+  "models": [
+    {
+      "model": "Decision Tree",
+      "accuracy": 0.649,
+      "macro_f1": 0.353,
+      "roc_auc": 0.6272
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.5946,
+      "macro_f1": 0.3751,
+      "roc_auc": 0.8096
+    },
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.3744,
+      "macro_f1": 0.261,
+      "roc_auc": 0.7353
+    },
+    {
+      "model": "HistGradientBoosting",
+      "accuracy": 0.5899,
+      "macro_f1": 0.3805,
+      "roc_auc": 0.8278
+    },
+    {
+      "model": "Majority baseline",
+      "accuracy": 0.7966,
+      "macro_f1": 0.2217,
+      "roc_auc": null
+    }
+  ],
+  "best_model": "HistGradientBoosting",
+  "conclusion": "All models fall below the 79.7% baseline accuracy, so macro-F1 is used; it finds 66% of Severity 3 and 57% of Severity 4 accidents.",
+  "mongo": {
+    "documents": 399581,
+    "queries": 10
+  },
+  "mapreduce_matches_pandas": true,
+  "images": {
+    "heatmap": "poster/assets/hotspots_map.png",
+    "timeseries": "poster/assets/timeseries.png",
+    "dashboard": "poster/assets/streamlit.png"
+  },
+  "captions": {
+    "fig1": "Fig. 1  Accident density, all 7.7 million records",
+    "fig2": "Fig. 2  Monthly accidents, 12-month mean",
+    "fig3": "Fig. 3  Streamlit dashboard (ML page)"
+  },
+  "team": [
+    {
+      "name": "Abin Shaji Thomas",
+      "reg_no": "URK24CS6007"
+    },
+    {
+      "name": "Jinto Joseph",
+      "reg_no": "URK24CS1210"
+    },
+    {
+      "name": "BÉAL Elouan",
+      "reg_no": "ISK26CS1005"
+    }
+  ],
+  "supervisor": "Dr. Anusha Bamini A M, Assistant Professor, Division of Computer Science and Engineering"
+}

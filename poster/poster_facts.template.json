@@ -1,0 +1,57 @@
+{
+  "total_rows": null,
+  "sample_rows": null,
+  "gps": {
+    "missing_before": null,
+    "recovered": null,
+    "dropped": null
+  },
+  "top_hotspots": [
+    {
+      "label": null,
+      "count": null
+    }
+  ],
+  "weather_insight": null,
+  "time_insight": null,
+  "correlation_insight": null,
+  "models": [
+    {
+      "model": "Decision Tree",
+      "accuracy": null,
+      "macro_f1": null,
+      "roc_auc": null
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": null,
+      "macro_f1": null,
+      "roc_auc": null
+    },
+    {
+      "model": "Logistic Regression",
+      "accuracy": null,
+      "macro_f1": null,
+      "roc_auc": null
+    }
+  ],
+  "best_model": null,
+  "conclusion": null,
+  "mongo": {
+    "documents": null,
+    "queries": null
+  },
+  "mapreduce_matches_pandas": null,
+  "images": {
+    "heatmap": "poster/assets/heatmap.png",
+    "timeseries": "poster/assets/timeseries.png",
+    "powerbi": "poster/assets/powerbi.png"
+  },
+  "team": [
+    {
+      "name": "Abin Shaji Thomas",
+      "reg_no": null
+    }
+  ],
+  "supervisor": null
+}
