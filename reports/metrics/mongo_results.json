@@ -9,14 +9,89 @@
     "_id_",
     "location_2dsphere"
   ],
+  "index_keys": {
+    "_id_": [
+      [
+        "_id",
+        1
+      ]
+    ],
+    "location_2dsphere": [
+      [
+        "location",
+        "2dsphere"
+      ]
+    ],
+    "State_1": [
+      [
+        "State",
+        1
+      ]
+    ],
+    "Severity_1": [
+      [
+        "Severity",
+        1
+      ]
+    ],
+    "Start_Time_1": [
+      [
+        "Start_Time",
+        1
+      ]
+    ]
+  },
+  "example_document": {
+    "_id": "A-110980",
+    "Source": "Source2",
+    "Severity": 3,
+    "Start_Time": "2016-05-31T20:15:58",
+    "End_Time": "2016-05-31T21:00:58",
+    "Start_Lat": 33.839382,
+    "Start_Lng": -117.948654,
+    "Distance_mi": 0.01,
+    "City": "Anaheim",
+    "State": "CA",
+    "Temperature_F": 66.0,
+    "Humidity": 70.0,
+    "Pressure_in": 29.87,
+    "Visibility_mi": 10.0,
+    "Wind_Direction": "SSW",
+    "Wind_Speed_mph": 5.8,
+    "Precipitation_in": 0.0,
+    "Weather_Condition": "Mostly Cloudy",
+    "WeatherGroup": "Cloudy",
+    "Hour": 20,
+    "DayOfWeek": 1,
+    "Month": 5,
+    "Year": 2016,
+    "IsWeekend": 0,
+    "IsRushHour": 0,
+    "DayNight": "Night",
+    "RoadFeatureCount": 1,
+    "Duration_min": 45.0,
+    "Junction": true,
+    "Traffic_Signal": false,
+    "Crossing": false,
+    "Stop": false,
+    "Railway": false,
+    "Station": false,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -117.948654,
+        33.839382
+      ]
+    }
+  },
   "repeat": 5,
   "queries": [
     {
       "name": "count_by_state",
       "description": "Accidents per state ($group + $sort)",
-      "ms_with_index": 272.52,
+      "ms_with_index": 199.96,
       "plan_with_index": "COLLSCAN",
-      "ms_without_index": 253.71,
+      "ms_without_index": 175.54,
       "plan_without_index": "COLLSCAN",
       "result": [
         {
@@ -220,9 +295,9 @@
     {
       "name": "avg_severity_by_weather",
       "description": "Average severity and count per weather group",
-      "ms_with_index": 329.6,
+      "ms_with_index": 287.13,
       "plan_with_index": "COLLSCAN",
-      "ms_without_index": 352.2,
+      "ms_without_index": 270.49,
       "plan_without_index": "COLLSCAN",
       "result": [
         {
@@ -265,9 +340,9 @@
     {
       "name": "top_cities",
       "description": "Top 10 cities ($group on City+State, $sort, $limit)",
-      "ms_with_index": 317.42,
+      "ms_with_index": 285.83,
       "plan_with_index": "COLLSCAN",
-      "ms_without_index": 375.65,
+      "ms_without_index": 271.06,
       "plan_without_index": "COLLSCAN",
       "result": [
         {
@@ -345,9 +420,9 @@
     {
       "name": "hourly_distribution",
       "description": "Accidents per hour of day",
-      "ms_with_index": 264.66,
+      "ms_with_index": 213.54,
       "plan_with_index": "COLLSCAN",
-      "ms_without_index": 269.84,
+      "ms_without_index": 200.8,
       "plan_without_index": "COLLSCAN",
       "result": [
         {
@@ -451,9 +526,9 @@
     {
       "name": "severity_counts",
       "description": "Accidents per severity level",
-      "ms_with_index": 228.31,
+      "ms_with_index": 171.61,
       "plan_with_index": "COLLSCAN",
-      "ms_without_index": 238.9,
+      "ms_without_index": 157.83,
       "plan_without_index": "COLLSCAN",
       "result": [
         {
@@ -477,7 +552,7 @@
     {
       "name": "geo_near_hotspot",
       "description": "$geoNear: accidents within 10 km of the top hotspot (Los Angeles, CA), by severity",
-      "ms_with_index": 50.38,
+      "ms_with_index": 46.72,
       "plan_with_index": "GEO_NEAR_2DSPHERE",
       "ms_without_index": null,
       "plan_without_index": "not possible: $geoNear requires the location_2dsphere index",
@@ -507,27 +582,27 @@
     {
       "name": "time_range_jan_2022",
       "description": "Accidents with Start_Time in January 2022 (range filter)",
-      "ms_with_index": 3.29,
+      "ms_with_index": 2.07,
       "plan_with_index": "IXSCAN",
-      "ms_without_index": 201.15,
+      "ms_without_index": 176.03,
       "plan_without_index": "COLLSCAN",
       "result": 7037
     },
     {
       "name": "ca_severity_4",
       "description": "Severity-4 accidents in California (equality filter)",
-      "ms_with_index": 14.81,
+      "ms_with_index": 12.48,
       "plan_with_index": "IXSCAN",
-      "ms_without_index": 233.94,
+      "ms_without_index": 199.29,
       "plan_without_index": "COLLSCAN",
       "result": 701
     },
     {
       "name": "top_states_severe",
       "description": "Top 5 states by severe (3-4) accidents ($match + $group + $sort + $limit)",
-      "ms_with_index": 113.86,
+      "ms_with_index": 91.6,
       "plan_with_index": "IXSCAN",
-      "ms_without_index": 241.43,
+      "ms_without_index": 202.57,
       "plan_without_index": "COLLSCAN",
       "result": [
         {
@@ -555,9 +630,9 @@
     {
       "name": "latest_ny",
       "description": "5 most recent accidents in NY (find + sort + limit + projection)",
-      "ms_with_index": 0.76,
+      "ms_with_index": 0.65,
       "plan_with_index": "IXSCAN",
-      "ms_without_index": 297.72,
+      "ms_without_index": 216.13,
       "plan_without_index": "COLLSCAN",
       "result": [
         {
@@ -614,7 +689,7 @@
       "Severity_1",
       "Start_Time_1"
     ],
-    "storage_size_mb": 45.6,
+    "storage_size_mb": 41.0,
     "avg_doc_bytes": 679,
     "server_version": "9.0.4"
   }

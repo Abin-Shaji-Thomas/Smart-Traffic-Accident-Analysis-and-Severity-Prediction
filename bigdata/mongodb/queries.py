@@ -110,8 +110,11 @@ def main() -> dict:
     client = get_client()
     coll = client[DB][COLL]
     queries = build_queries()
+    example = coll.find_one({"Junction": True, "Severity": {"$gte": 3}}) or coll.find_one({})
     out = {"database": DB, "collection": COLL, "documents": coll.count_documents({}),
-           "indexes": sorted(coll.index_information()), "repeat": REPEAT, "queries": []}
+           "indexes": sorted(coll.index_information()),
+           "index_keys": {k: v["key"] for k, v in coll.index_information().items()},
+           "example_document": jsonable(example), "repeat": REPEAT, "queries": []}
     with_idx = {}
     for q in queries:
         res, ms = timed(coll, q)

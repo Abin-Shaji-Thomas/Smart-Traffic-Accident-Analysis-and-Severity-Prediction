@@ -24,7 +24,7 @@
       "reduce_output_records": 49,
       "user_counters": {},
       "output": "bigdata/hadoop_mapreduce/output/state.tsv",
-      "seconds": 0.61
+      "seconds": 0.72
     },
     "weather": {
       "splits": 4,
@@ -47,7 +47,7 @@
       "reduce_output_records": 7,
       "user_counters": {},
       "output": "bigdata/hadoop_mapreduce/output/weather.tsv",
-      "seconds": 0.6
+      "seconds": 0.74
     },
     "hour": {
       "splits": 4,
@@ -70,7 +70,7 @@
       "reduce_output_records": 24,
       "user_counters": {},
       "output": "bigdata/hadoop_mapreduce/output/hour.tsv",
-      "seconds": 0.62
+      "seconds": 0.88
     }
   }
 }
