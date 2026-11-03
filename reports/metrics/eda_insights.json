@@ -1,0 +1,13 @@
+{
+  "severity": "Severity 2 makes up 79.66% of accidents and Severity 1 only 0.87%; the largest class is 91x the smallest, so accuracy alone is misleading and macro-F1 is used in Module 4.",
+  "weather": "Rain has the highest severe share (22.87%) vs Fog/Haze the lowest (15.81%); overall 19.47%. The link is significant (chi-square p<1e-300) but weak (Cramer's V=0.039).",
+  "weather_numeric": "Strongest numeric weather effect: Pressure(in) (epsilon^2=0.0106); all six effects are below 0.06 (negligible/small), so single weather readings separate severity levels only slightly.",
+  "states": "CA, FL and TX record the most accidents (41.5% of all); top city is Miami, FL (186,768). Counts are not rates (no traffic volume).",
+  "hotspots": "Densest 0.1-degree cell: around Los Angeles, CA with 50,254 accidents; the top 10 cells hold 4.6% of all accidents.",
+  "dbscan": "DBSCAN (2 km, 25 points) finds 302 dense urban clusters; the largest is around Los Angeles, CA; 57.81% of accidents are outside any dense cluster.",
+  "correlation": "Strongest numeric link to Severity: Year (Spearman -0.28); strongest categorical: Source (V=0.29), then City (V=0.28).",
+  "time": "Peak hours are 07:00 and 16:00; a weekend day averages 53% fewer accidents than a weekday.",
+  "year_artifact": "Severe share falls from 33.99% in 2016 to 2.83% in 2023 while counts rise - a change in data collection, so Year is not used as an ML feature.",
+  "infrastructure": "Accidents near a junction are severe 26.75% of the time vs 18.9% elsewhere; near a traffic signal only 9.54% vs 21.2%.",
+  "duration": "Median traffic-impact duration rises from 44.7 min (Severity 1) to 127.2 min (Severity 4)."
+}

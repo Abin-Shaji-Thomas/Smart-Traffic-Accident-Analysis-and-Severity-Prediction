@@ -1,0 +1,69 @@
+{
+  "subsample_rows": 100000,
+  "eps_km": 2.0,
+  "min_samples": 25,
+  "n_clusters": 302,
+  "noise_pct": 57.81,
+  "top_clusters": [
+    {
+      "points": 5887,
+      "avg_severity": 2.227,
+      "city": "Los Angeles",
+      "state": "CA"
+    },
+    {
+      "points": 3418,
+      "avg_severity": 2.121,
+      "city": "Miami",
+      "state": "FL"
+    },
+    {
+      "points": 1437,
+      "avg_severity": 2.308,
+      "city": "Bronx",
+      "state": "NY"
+    },
+    {
+      "points": 1437,
+      "avg_severity": 2.214,
+      "city": "Houston",
+      "state": "TX"
+    },
+    {
+      "points": 1432,
+      "avg_severity": 2.052,
+      "city": "Charlotte",
+      "state": "NC"
+    },
+    {
+      "points": 1372,
+      "avg_severity": 2.31,
+      "city": "Dallas",
+      "state": "TX"
+    },
+    {
+      "points": 1012,
+      "avg_severity": 2.098,
+      "city": "Raleigh",
+      "state": "NC"
+    },
+    {
+      "points": 1011,
+      "avg_severity": 2.079,
+      "city": "Orlando",
+      "state": "FL"
+    },
+    {
+      "points": 956,
+      "avg_severity": 2.124,
+      "city": "Austin",
+      "state": "TX"
+    },
+    {
+      "points": 912,
+      "avg_severity": 2.334,
+      "city": "Oakland",
+      "state": "CA"
+    }
+  ]
+}

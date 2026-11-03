@@ -1,0 +1,26 @@
+City,State,accidents,severe_pct
+Miami,FL,186768,9.0
+Houston,TX,169428,18.0
+Los Angeles,CA,156491,22.92
+Charlotte,NC,138345,5.59
+Dallas,TX,130303,26.2
+Orlando,FL,109690,6.45
+Austin,TX,96604,9.23
+Raleigh,NC,86066,9.89
+Nashville,TN,72670,15.1
+Baton Rouge,LA,71588,9.54
+Atlanta,GA,68154,49.66
+Sacramento,CA,66264,10.71
+San Diego,CA,55504,21.86
+Phoenix,AZ,53701,18.56
+Minneapolis,MN,51488,24.19
+Oklahoma City,OK,46092,11.26
+Richmond,VA,41954,13.72
+Jacksonville,FL,41529,38.45
+Tucson,AZ,39304,3.77
+San Antonio,TX,37318,24.11
+Saint Paul,MN,37196,25.81
+Seattle,WA,36564,25.77
+Greenville,SC,35694,12.93
+Columbia,SC,35018,19.94
+Portland,OR,34754,14.31

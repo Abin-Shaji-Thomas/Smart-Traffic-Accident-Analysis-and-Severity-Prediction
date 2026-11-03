@@ -1,0 +1,13 @@
+feature,present,accidents,avg_severity,severe_pct
+Traffic_Signal,False,340438,2.2337,21.2
+Traffic_Signal,True,59143,2.0906,9.54
+Junction,False,370228,2.2058,18.9
+Junction,True,29353,2.2971,26.75
+Crossing,False,354580,2.2312,21.05
+Crossing,True,45001,2.065,7.04
+Stop,False,388544,2.2163,19.84
+Stop,True,11037,2.0792,6.43
+Railway,False,396182,2.2129,19.51
+Railway,True,3399,2.1665,15.71
+Station,False,389258,2.2159,19.78
+Station,True,10323,2.0827,7.99

@@ -1,0 +1,8 @@
+WeatherGroup,accidents,avg_severity,severe_pct,share_of_accidents_pct
+Clear,184327,2.1877,17.16,46.13
+Cloudy,164458,2.235,21.68,41.16
+Rain,26457,2.2491,22.87,6.62
+Fog/Haze,10321,2.1751,15.81,2.58
+Snow,9264,2.2409,20.2,2.32
+Storm,4590,2.2207,21.05,1.15
+Other,164,2.0976,7.32,0.04

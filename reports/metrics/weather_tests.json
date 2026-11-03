@@ -1,0 +1,70 @@
+{
+  "chi2_weathergroup_severity": {
+    "chi2": 1818.548918409381,
+    "dof": 18,
+    "p_value": 0.0,
+    "cramers_v": 0.03875618723324238
+  },
+  "kruskal": [
+    {
+      "variable": "Pressure(in)",
+      "H": 4234.3,
+      "p_value": 0.0,
+      "epsilon_squared": 0.0106,
+      "median_sev1": 29.54,
+      "median_sev2": 29.84,
+      "median_sev3": 29.92,
+      "median_sev4": 29.81
+    },
+    {
+      "variable": "Temperature(F)",
+      "H": 1544.9,
+      "p_value": 0.0,
+      "epsilon_squared": 0.0039,
+      "median_sev1": 73.0,
+      "median_sev2": 63.0,
+      "median_sev3": 64.9,
+      "median_sev4": 60.1
+    },
+    {
+      "variable": "Wind_Speed(mph)",
+      "H": 925.5,
+      "p_value": 2.6304657770460676e-200,
+      "epsilon_squared": 0.0023,
+      "median_sev1": 7.0,
+      "median_sev2": 7.0,
+      "median_sev3": 7.0,
+      "median_sev4": 7.0
+    },
+    {
+      "variable": "Precipitation(in)",
+      "H": 274.4,
+      "p_value": 3.3775600264701417e-59,
+      "epsilon_squared": 0.0007,
+      "median_sev1": 0.0,
+      "median_sev2": 0.0,
+      "median_sev3": 0.0,
+      "median_sev4": 0.0
+    },
+    {
+      "variable": "Humidity(%)",
+      "H": 194.6,
+      "p_value": 6.100701665166915e-42,
+      "epsilon_squared": 0.0005,
+      "median_sev1": 67.0,
+      "median_sev2": 67.0,
+      "median_sev3": 67.0,
+      "median_sev4": 70.0
+    },
+    {
+      "variable": "Visibility(mi)",
+      "H": 166.4,
+      "p_value": 7.661250098276545e-36,
+      "epsilon_squared": 0.0004,
+      "median_sev1": 10.0,
+      "median_sev2": 10.0,
+      "median_sev3": 10.0,
+      "median_sev4": 10.0
+    }
+  ]
+}
