@@ -1,0 +1,22 @@
+{
+  "total_rows": 7728394,
+  "total_columns": 46,
+  "sample_rows": 399999,
+  "sample_fraction": 0.05175719560881601,
+  "chunksize": 500000,
+  "random_state": 42,
+  "full_severity_counts": {
+    "1": 67366,
+    "2": 6156981,
+    "3": 1299337,
+    "4": 204710
+  },
+  "sample_severity_counts": {
+    "1": 3487,
+    "2": 318667,
+    "3": 67251,
+    "4": 10594
+  },
+  "date_min": "2016-01-14 20:18:33",
+  "date_max": "2023-03-31 22:46:43"
+}

@@ -1,0 +1,9 @@
+column,missing_before,missing_after,method,pct_missing_before
+Temperature(F),8591,0,State+Month median,2.15
+Humidity(%),9140,0,State+Month median,2.29
+Pressure(in),7369,0,State+Month median,1.84
+Visibility(mi),9204,0,State+Month median,2.3
+Wind_Speed(mph),29657,0,State+Month median,7.42
+Precipitation(in),114071,0,"0 if dry weather group, else State+Month median",28.55
+Weather_Condition,8998,0,State+Month mode,2.25
+Wind_Direction,9109,0,State+Month mode,2.28

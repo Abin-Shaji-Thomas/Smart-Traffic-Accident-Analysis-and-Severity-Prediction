@@ -1,0 +1,8 @@
+column,method,lower,upper,iqr_outliers,n_clipped,mean_before,mean_after,std_before,std_after,max_before,max_after
+Distance(mi),quantile,0.0,9.669,49741,1998,0.567,0.527,1.922,1.256,441.75,9.669
+Temperature(F),quantile,6.0,99.0,2596,3692,61.635,61.658,18.967,18.794,129.2,99.0
+Humidity(%),quantile,9.0,100.0,0,1667,64.872,64.883,22.637,22.61,100.0,100.0
+Pressure(in),quantile,24.16,30.51,23758,3810,29.538,29.543,1.005,0.97,31.15,30.51
+Visibility(mi),quantile,0.25,10.0,76360,2845,9.112,9.059,2.64,2.31,100.0,10.0
+Wind_Speed(mph),quantile,0.0,25.0,15042,1757,7.612,7.591,5.101,5.002,127.0,25.0
+Precipitation(in),quantile,0.0,0.23,27530,1974,0.006,0.004,0.083,0.024,10.04,0.23

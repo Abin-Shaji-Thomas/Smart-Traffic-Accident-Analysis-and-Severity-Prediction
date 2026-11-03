@@ -1,0 +1,47 @@
+column,meaning,dtype,missing,pct_missing
+ID,Unique record identifier,str,0,0.0
+Source,Data provider (API) that reported the accident,str,0,0.0
+Severity,"Impact on traffic, 1 (least) to 4 (most)",int64,0,0.0
+Start_Time,Local start time of the accident,str,0,0.0
+End_Time,Local time when the impact on traffic ended,str,0,0.0
+Start_Lat,GPS latitude of start point,float64,0,0.0
+Start_Lng,GPS longitude of start point,float64,0,0.0
+End_Lat,GPS latitude of end point,float64,3402762,44.029
+End_Lng,GPS longitude of end point,float64,3402762,44.029
+Distance(mi),Length of road extent affected (miles),float64,0,0.0
+Description,Free-text description of the accident,str,5,0.0
+Street,Street name,str,10869,0.141
+City,City,str,253,0.003
+County,County,str,0,0.0
+State,State (2-letter code),str,0,0.0
+Zipcode,ZIP code,str,1915,0.025
+Country,Country,str,0,0.0
+Timezone,Time zone,str,7808,0.101
+Airport_Code,Nearest airport weather station,str,22635,0.293
+Weather_Timestamp,Time of the weather observation,str,120228,1.556
+Temperature(F),Temperature (F),float64,163853,2.12
+Wind_Chill(F),Wind chill (F),float64,1999019,25.866
+Humidity(%),Relative humidity (%),float64,174144,2.253
+Pressure(in),Air pressure (inches),float64,140679,1.82
+Visibility(mi),Visibility (miles),float64,177098,2.292
+Wind_Direction,Wind direction,str,175206,2.267
+Wind_Speed(mph),Wind speed (mph),float64,571233,7.391
+Precipitation(in),Precipitation amount (inches),float64,2203586,28.513
+Weather_Condition,Weather condition text,str,173459,2.244
+Amenity,Amenity nearby,bool,0,0.0
+Bump,Speed bump nearby,bool,0,0.0
+Crossing,Crossing nearby,bool,0,0.0
+Give_Way,Give-way sign nearby,bool,0,0.0
+Junction,Junction nearby,bool,0,0.0
+No_Exit,No-exit nearby,bool,0,0.0
+Railway,Railway nearby,bool,0,0.0
+Roundabout,Roundabout nearby,bool,0,0.0
+Station,Station nearby,bool,0,0.0
+Stop,Stop sign nearby,bool,0,0.0
+Traffic_Calming,Traffic calming nearby,bool,0,0.0
+Traffic_Signal,Traffic signal nearby,bool,0,0.0
+Turning_Loop,Turning loop nearby,bool,0,0.0
+Sunrise_Sunset,Day/Night by sunrise/sunset,str,23246,0.301
+Civil_Twilight,Day/Night by civil twilight,str,23246,0.301
+Nautical_Twilight,Day/Night by nautical twilight,str,23246,0.301
+Astronomical_Twilight,Day/Night by astronomical twilight,str,23246,0.301
