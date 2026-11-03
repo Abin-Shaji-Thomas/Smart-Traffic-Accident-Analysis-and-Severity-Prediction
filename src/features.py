@@ -40,7 +40,7 @@ def weather_group(cond: pd.Series) -> pd.Series:
 def add_time_features(df: pd.DataFrame) -> pd.DataFrame:
     st = df["Start_Time"]
     df["Hour"] = st.dt.hour.astype("int8")
-    df["DayOfWeek"] = st.dt.dayofweek.astype("int8")      # 0 = Monday ... 6 = Sunday
+    df["DayOfWeek"] = st.dt.day_of_week.astype("int8")      # 0 = Monday ... 6 = Sunday
     df["DayName"] = st.dt.day_name()
     df["Month"] = st.dt.month.astype("int8")
     df["Year"] = st.dt.year.astype("int16")
@@ -49,7 +49,7 @@ def add_time_features(df: pd.DataFrame) -> pd.DataFrame:
     rush = df["Hour"].isin([7, 8, 9, 16, 17, 18])
     df["IsRushHour"] = (rush & (df["IsWeekend"] == 0)).astype("int8")
     # Day/Night from the dataset's Sunrise_Sunset; missing values filled from the hour (06-17 = Day)
-    dn = df["Sunrise_Sunset"].copy() if "Sunrise_Sunset" in df else pd.Series(np.nan, index=df.index)
+    dn = df["Sunrise_Sunset"].astype(object) if "Sunrise_Sunset" in df else pd.Series(None, index=df.index, dtype=object)
     dn = dn.fillna(pd.Series(np.where(df["Hour"].between(6, 17), "Day", "Night"), index=df.index))
     df["DayNight"] = dn
     if "End_Time" in df:
