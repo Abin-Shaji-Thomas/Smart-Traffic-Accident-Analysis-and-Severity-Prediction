@@ -5,12 +5,13 @@ bigdata/hadoop_mapreduce/input/
 bigdata/hadoop_mapreduce/output/
 # secrets / environments
 .env
-.venv/
-# python / jupyter clutter
+.venv*/
+# python / jupyter / tooling clutter
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+.pytest_cache/
 logs/
 *.log
-# large model files (>50 MB are kept local)
-models/
+# model file is ignored only while it is over 50 MB (rebuild with scripts/train_final.py)
+models/best_model.joblib
