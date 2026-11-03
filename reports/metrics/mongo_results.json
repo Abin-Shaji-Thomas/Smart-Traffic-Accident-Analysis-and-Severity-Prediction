@@ -1,0 +1,621 @@
+{
+  "database": "traffic_db",
+  "collection": "accidents",
+  "documents": 399581,
+  "indexes": [
+    "Severity_1",
+    "Start_Time_1",
+    "State_1",
+    "_id_",
+    "location_2dsphere"
+  ],
+  "repeat": 5,
+  "queries": [
+    {
+      "name": "count_by_state",
+      "description": "Accidents per state ($group + $sort)",
+      "ms_with_index": 272.52,
+      "plan_with_index": "COLLSCAN",
+      "ms_without_index": 253.71,
+      "plan_without_index": "COLLSCAN",
+      "result": [
+        {
+          "_id": "CA",
+          "accidents": 89890
+        },
+        {
+          "_id": "FL",
+          "accidents": 45340
+        },
+        {
+          "_id": "TX",
+          "accidents": 30284
+        },
+        {
+          "_id": "SC",
+          "accidents": 19602
+        },
+        {
+          "_id": "NY",
+          "accidents": 18112
+        },
+        {
+          "_id": "NC",
+          "accidents": 17477
+        },
+        {
+          "_id": "VA",
+          "accidents": 15631
+        },
+        {
+          "_id": "PA",
+          "accidents": 15178
+        },
+        {
+          "_id": "MN",
+          "accidents": 10041
+        },
+        {
+          "_id": "OR",
+          "accidents": 9234
+        },
+        {
+          "_id": "GA",
+          "accidents": 8757
+        },
+        {
+          "_id": "AZ",
+          "accidents": 8756
+        },
+        {
+          "_id": "IL",
+          "accidents": 8736
+        },
+        {
+          "_id": "TN",
+          "accidents": 8648
+        },
+        {
+          "_id": "MI",
+          "accidents": 8375
+        },
+        {
+          "_id": "LA",
+          "accidents": 7498
+        },
+        {
+          "_id": "NJ",
+          "accidents": 7390
+        },
+        {
+          "_id": "MD",
+          "accidents": 7331
+        },
+        {
+          "_id": "OH",
+          "accidents": 6091
+        },
+        {
+          "_id": "WA",
+          "accidents": 5572
+        },
+        {
+          "_id": "AL",
+          "accidents": 5394
+        },
+        {
+          "_id": "UT",
+          "accidents": 5048
+        },
+        {
+          "_id": "CO",
+          "accidents": 4700
+        },
+        {
+          "_id": "OK",
+          "accidents": 4336
+        },
+        {
+          "_id": "MO",
+          "accidents": 3996
+        },
+        {
+          "_id": "CT",
+          "accidents": 3674
+        },
+        {
+          "_id": "IN",
+          "accidents": 3515
+        },
+        {
+          "_id": "MA",
+          "accidents": 3197
+        },
+        {
+          "_id": "WI",
+          "accidents": 1791
+        },
+        {
+          "_id": "KY",
+          "accidents": 1680
+        },
+        {
+          "_id": "NE",
+          "accidents": 1478
+        },
+        {
+          "_id": "MT",
+          "accidents": 1465
+        },
+        {
+          "_id": "IA",
+          "accidents": 1408
+        },
+        {
+          "_id": "AR",
+          "accidents": 1221
+        },
+        {
+          "_id": "NV",
+          "accidents": 1171
+        },
+        {
+          "_id": "KS",
+          "accidents": 1106
+        },
+        {
+          "_id": "DC",
+          "accidents": 967
+        },
+        {
+          "_id": "RI",
+          "accidents": 899
+        },
+        {
+          "_id": "MS",
+          "accidents": 829
+        },
+        {
+          "_id": "DE",
+          "accidents": 778
+        },
+        {
+          "_id": "WV",
+          "accidents": 723
+        },
+        {
+          "_id": "ID",
+          "accidents": 642
+        },
+        {
+          "_id": "NM",
+          "accidents": 536
+        },
+        {
+          "_id": "NH",
+          "accidents": 525
+        },
+        {
+          "_id": "WY",
+          "accidents": 188
+        },
+        {
+          "_id": "ND",
+          "accidents": 167
+        },
+        {
+          "_id": "ME",
+          "accidents": 142
+        },
+        {
+          "_id": "VT",
+          "accidents": 43
+        },
+        {
+          "_id": "SD",
+          "accidents": 19
+        }
+      ]
+    },
+    {
+      "name": "avg_severity_by_weather",
+      "description": "Average severity and count per weather group",
+      "ms_with_index": 329.6,
+      "plan_with_index": "COLLSCAN",
+      "ms_without_index": 352.2,
+      "plan_without_index": "COLLSCAN",
+      "result": [
+        {
+          "_id": "Rain",
+          "avg_severity": 2.249121,
+          "accidents": 26457
+        },
+        {
+          "_id": "Snow",
+          "avg_severity": 2.240933,
+          "accidents": 9264
+        },
+        {
+          "_id": "Cloudy",
+          "avg_severity": 2.235008,
+          "accidents": 164458
+        },
+        {
+          "_id": "Storm",
+          "avg_severity": 2.220697,
+          "accidents": 4590
+        },
+        {
+          "_id": "Clear",
+          "avg_severity": 2.187721,
+          "accidents": 184327
+        },
+        {
+          "_id": "Fog/Haze",
+          "avg_severity": 2.17508,
+          "accidents": 10321
+        },
+        {
+          "_id": "Other",
+          "avg_severity": 2.097561,
+          "accidents": 164
+        }
+      ]
+    },
+    {
+      "name": "top_cities",
+      "description": "Top 10 cities ($group on City+State, $sort, $limit)",
+      "ms_with_index": 317.42,
+      "plan_with_index": "COLLSCAN",
+      "ms_without_index": 375.65,
+      "plan_without_index": "COLLSCAN",
+      "result": [
+        {
+          "_id": {
+            "City": "Miami",
+            "State": "FL"
+          },
+          "accidents": 9627
+        },
+        {
+          "_id": {
+            "City": "Houston",
+            "State": "TX"
+          },
+          "accidents": 8931
+        },
+        {
+          "_id": {
+            "City": "Los Angeles",
+            "State": "CA"
+          },
+          "accidents": 7973
+        },
+        {
+          "_id": {
+            "City": "Charlotte",
+            "State": "NC"
+          },
+          "accidents": 7186
+        },
+        {
+          "_id": {
+            "City": "Dallas",
+            "State": "TX"
+          },
+          "accidents": 6713
+        },
+        {
+          "_id": {
+            "City": "Orlando",
+            "State": "FL"
+          },
+          "accidents": 5599
+        },
+        {
+          "_id": {
+            "City": "Austin",
+            "State": "TX"
+          },
+          "accidents": 4987
+        },
+        {
+          "_id": {
+            "City": "Raleigh",
+            "State": "NC"
+          },
+          "accidents": 4460
+        },
+        {
+          "_id": {
+            "City": "Nashville",
+            "State": "TN"
+          },
+          "accidents": 3744
+        },
+        {
+          "_id": {
+            "City": "Baton Rouge",
+            "State": "LA"
+          },
+          "accidents": 3583
+        }
+      ]
+    },
+    {
+      "name": "hourly_distribution",
+      "description": "Accidents per hour of day",
+      "ms_with_index": 264.66,
+      "plan_with_index": "COLLSCAN",
+      "ms_without_index": 269.84,
+      "plan_without_index": "COLLSCAN",
+      "result": [
+        {
+          "_id": 0,
+          "accidents": 5881
+        },
+        {
+          "_id": 1,
+          "accidents": 5004
+        },
+        {
+          "_id": 2,
+          "accidents": 4693
+        },
+        {
+          "_id": 3,
+          "accidents": 4344
+        },
+        {
+          "_id": 4,
+          "accidents": 8227
+        },
+        {
+          "_id": 5,
+          "accidents": 11858
+        },
+        {
+          "_id": 6,
+          "accidents": 20858
+        },
+        {
+          "_id": 7,
+          "accidents": 30549
+        },
+        {
+          "_id": 8,
+          "accidents": 30048
+        },
+        {
+          "_id": 9,
+          "accidents": 18720
+        },
+        {
+          "_id": 10,
+          "accidents": 17789
+        },
+        {
+          "_id": 11,
+          "accidents": 18186
+        },
+        {
+          "_id": 12,
+          "accidents": 18485
+        },
+        {
+          "_id": 13,
+          "accidents": 20497
+        },
+        {
+          "_id": 14,
+          "accidents": 23237
+        },
+        {
+          "_id": 15,
+          "accidents": 27369
+        },
+        {
+          "_id": 16,
+          "accidents": 30114
+        },
+        {
+          "_id": 17,
+          "accidents": 29668
+        },
+        {
+          "_id": 18,
+          "accidents": 22184
+        },
+        {
+          "_id": 19,
+          "accidents": 15298
+        },
+        {
+          "_id": 20,
+          "accidents": 11536
+        },
+        {
+          "_id": 21,
+          "accidents": 9811
+        },
+        {
+          "_id": 22,
+          "accidents": 8668
+        },
+        {
+          "_id": 23,
+          "accidents": 6557
+        }
+      ]
+    },
+    {
+      "name": "severity_counts",
+      "description": "Accidents per severity level",
+      "ms_with_index": 228.31,
+      "plan_with_index": "COLLSCAN",
+      "ms_without_index": 238.9,
+      "plan_without_index": "COLLSCAN",
+      "result": [
+        {
+          "_id": 1,
+          "accidents": 3482
+        },
+        {
+          "_id": 2,
+          "accidents": 318287
+        },
+        {
+          "_id": 3,
+          "accidents": 67232
+        },
+        {
+          "_id": 4,
+          "accidents": 10580
+        }
+      ]
+    },
+    {
+      "name": "geo_near_hotspot",
+      "description": "$geoNear: accidents within 10 km of the top hotspot (Los Angeles, CA), by severity",
+      "ms_with_index": 50.38,
+      "plan_with_index": "GEO_NEAR_2DSPHERE",
+      "ms_without_index": null,
+      "plan_without_index": "not possible: $geoNear requires the location_2dsphere index",
+      "result": [
+        {
+          "_id": 1,
+          "accidents": 4,
+          "avg_dist_km": 7.907118
+        },
+        {
+          "_id": 2,
+          "accidents": 4138,
+          "avg_dist_km": 5.669471
+        },
+        {
+          "_id": 3,
+          "accidents": 1052,
+          "avg_dist_km": 5.486786
+        },
+        {
+          "_id": 4,
+          "accidents": 32,
+          "avg_dist_km": 5.15636
+        }
+      ]
+    },
+    {
+      "name": "time_range_jan_2022",
+      "description": "Accidents with Start_Time in January 2022 (range filter)",
+      "ms_with_index": 3.29,
+      "plan_with_index": "IXSCAN",
+      "ms_without_index": 201.15,
+      "plan_without_index": "COLLSCAN",
+      "result": 7037
+    },
+    {
+      "name": "ca_severity_4",
+      "description": "Severity-4 accidents in California (equality filter)",
+      "ms_with_index": 14.81,
+      "plan_with_index": "IXSCAN",
+      "ms_without_index": 233.94,
+      "plan_without_index": "COLLSCAN",
+      "result": 701
+    },
+    {
+      "name": "top_states_severe",
+      "description": "Top 5 states by severe (3-4) accidents ($match + $group + $sort + $limit)",
+      "ms_with_index": 113.86,
+      "plan_with_index": "IXSCAN",
+      "ms_without_index": 241.43,
+      "plan_without_index": "COLLSCAN",
+      "result": [
+        {
+          "_id": "CA",
+          "severe": 14843
+        },
+        {
+          "_id": "TX",
+          "severe": 6603
+        },
+        {
+          "_id": "FL",
+          "severe": 6017
+        },
+        {
+          "_id": "NY",
+          "severe": 4259
+        },
+        {
+          "_id": "GA",
+          "severe": 3768
+        }
+      ]
+    },
+    {
+      "name": "latest_ny",
+      "description": "5 most recent accidents in NY (find + sort + limit + projection)",
+      "ms_with_index": 0.76,
+      "plan_with_index": "IXSCAN",
+      "ms_without_index": 297.72,
+      "plan_without_index": "COLLSCAN",
+      "result": [
+        {
+          "_id": "A-3663634",
+          "Severity": 2,
+          "Start_Time": "2023-03-31T15:01:06",
+          "City": "Flushing"
+        },
+        {
+          "_id": "A-3665209",
+          "Severity": 2,
+          "Start_Time": "2023-03-31T13:58:15",
+          "City": "Rochester"
+        },
+        {
+          "_id": "A-3662311",
+          "Severity": 2,
+          "Start_Time": "2023-03-31T12:57:00",
+          "City": "Newburgh"
+        },
+        {
+          "_id": "A-3675183",
+          "Severity": 2,
+          "Start_Time": "2023-03-31T12:54:22",
+          "City": "Newburgh"
+        },
+        {
+          "_id": "A-3661364",
+          "Severity": 2,
+          "Start_Time": "2023-03-30T17:26:58",
+          "City": "Hawthorne"
+        }
+      ]
+    }
+  ],
+  "indexes_restored": [
+    "Severity_1",
+    "Start_Time_1",
+    "State_1",
+    "_id_",
+    "location_2dsphere"
+  ],
+  "n_queries": 10,
+  "load": {
+    "database": "traffic_db",
+    "collection": "accidents",
+    "documents": 399581,
+    "batch_size": 10000,
+    "batches": 40,
+    "load_seconds": 6.2,
+    "indexes": [
+      "location_2dsphere",
+      "State_1",
+      "Severity_1",
+      "Start_Time_1"
+    ],
+    "storage_size_mb": 45.6,
+    "avg_doc_bytes": 679,
+    "server_version": "9.0.4"
+  }
+}

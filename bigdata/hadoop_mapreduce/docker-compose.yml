@@ -1,0 +1,31 @@
+# OPTIONAL single-node Hadoop 3 cluster (HDFS + YARN) for running the streaming jobs on real Hadoop.
+# NOT EXECUTED in this project (Docker is not installed on the development laptop).
+# Fresh single-node configuration written for this project (Abin Shaji Thomas); uses the official
+# apache/hadoop image. Start with:  docker compose -f bigdata/hadoop_mapreduce/docker-compose.yml up -d
+services:
+  namenode:
+    image: apache/hadoop:3.3.6
+    hostname: namenode
+    command: ["hdfs", "namenode"]
+    ports: ["9870:9870"]          # HDFS web UI
+    env_file: ./hadoop.env
+    environment:
+      ENSURE_NAMENODE_DIR: "/tmp/hadoop-root/dfs/name"
+    volumes:
+      - ./:/workspace              # mapper.py, reducer.py and input/ are visible inside the container
+  datanode:
+    image: apache/hadoop:3.3.6
+    command: ["hdfs", "datanode"]
+    env_file: ./hadoop.env
+  resourcemanager:
+    image: apache/hadoop:3.3.6
+    hostname: resourcemanager
+    command: ["yarn", "resourcemanager"]
+    ports: ["8088:8088"]          # YARN web UI
+    env_file: ./hadoop.env
+    volumes:
+      - ./:/workspace
+  nodemanager:
+    image: apache/hadoop:3.3.6
+    command: ["yarn", "nodemanager"]
+    env_file: ./hadoop.env
