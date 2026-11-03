@@ -26,15 +26,6 @@ def group_summary(df: pd.DataFrame, by, sort_by_count: bool = True) -> pd.DataFr
     return g
 
 
-def infrastructure_summary(df: pd.DataFrame, features) -> pd.DataFrame:
-    parts = []
-    for f in features:
-        s = group_summary(df, f, sort_by_count=False).rename(columns={f: "present"})
-        s.insert(0, "feature", f)
-        parts.append(s)
-    return pd.concat(parts, ignore_index=True)
-
-
 def cramers_v(x: pd.Series, y: pd.Series) -> float:
     """Bias-corrected Cramer's V (Bergsma 2013)."""
     ct = pd.crosstab(x, y)

@@ -1,0 +1,22 @@
+column,full_file_pct_missing,sample_before_missing,sample_after_missing,status_after_cleaning
+End_Lat,44.029,176093.0,0.0,complete
+End_Lng,44.029,176093.0,0.0,complete
+Precipitation(in),28.513,114116.0,0.0,complete
+Wind_Chill(F),25.866,103584.0,,column dropped
+Wind_Speed(mph),7.391,29675.0,0.0,complete
+Visibility(mi),2.292,9215.0,0.0,complete
+Wind_Direction,2.267,9124.0,0.0,complete
+Humidity(%),2.253,9153.0,0.0,complete
+Weather_Condition,2.244,9011.0,0.0,complete
+Temperature(F),2.12,8597.0,0.0,complete
+Pressure(in),1.82,7352.0,0.0,complete
+Weather_Timestamp,1.556,6314.0,,column dropped
+Sunrise_Sunset,0.301,1243.0,,column dropped
+Nautical_Twilight,0.301,1243.0,,column dropped
+Astronomical_Twilight,0.301,1243.0,,column dropped
+Civil_Twilight,0.301,1243.0,,column dropped
+Airport_Code,0.293,1148.0,,column dropped
+Street,0.141,552.0,,column dropped
+Timezone,0.101,380.0,,column dropped
+Zipcode,0.025,83.0,,column dropped
+City,0.003,15.0,0.0,complete

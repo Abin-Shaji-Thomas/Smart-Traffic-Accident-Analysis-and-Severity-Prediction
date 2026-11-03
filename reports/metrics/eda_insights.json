@@ -8,6 +8,6 @@
   "correlation": "Strongest numeric link to Severity: Year (Spearman -0.28); strongest categorical: Source (V=0.29), then City (V=0.28).",
   "time": "Peak hours are 07:00 and 16:00; a weekend day averages 53% fewer accidents than a weekday.",
   "year_artifact": "Severe share falls from 33.99% in 2016 to 2.83% in 2023 while counts rise - a change in data collection, so Year is not used as an ML feature.",
-  "infrastructure": "Accidents near a junction are severe 26.75% of the time vs 18.9% elsewhere; near a traffic signal only 9.54% vs 21.2%.",
+  "infrastructure": "Severe share is highest near Junction (26.75% vs 18.9% without) and lowest near Crossing (7.04% vs 21.05%); strongest association: Crossing (V=0.120).",
   "duration": "Median traffic-impact duration rises from 44.7 min (Severity 1) to 127.2 min (Severity 4)."
 }
