@@ -1,7 +1,7 @@
 {
-  "best": "Random Forest has the best macro-F1 (0.375, accuracy 0.595) vs the majority baseline (0.222 macro-F1, 0.797 accuracy).",
-  "distance": "Adding Distance(mi) changes Random Forest's macro-F1 from 0.375 to 0.421.",
-  "weights": "For Logistic Regression, sqrt weights give accuracy 0.768 / macro-F1 0.350 vs inverse 0.375 / 0.261.",
-  "top_feature": "Most important Random Forest feature: City_freq (0.110), then Month (0.106).",
-  "cv": "5-fold CV macro-F1 of Random Forest: 0.374 +/- 0.001."
+  "best": "HistGradientBoosting has the best macro-F1 (0.381, accuracy 0.590) vs the majority baseline (0.222 macro-F1, 0.797 accuracy).",
+  "distance": "Adding Distance(mi) changes HistGradientBoosting's macro-F1 from 0.381 to 0.431.",
+  "weights": "For HistGradientBoosting, sqrt weights give accuracy 0.788 / macro-F1 0.464 / Severity-4 recall 0.240 vs balanced 0.590 / 0.381 / 0.571.",
+  "top_features": "Top permutation-importance features: Start_Lng, City, Start_Lat.",
+  "cv": "5-fold CV macro-F1 of HistGradientBoosting: 0.371 +/- 0.002."
 }

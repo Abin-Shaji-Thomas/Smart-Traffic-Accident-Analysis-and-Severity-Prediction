@@ -1,0 +1,673 @@
+{
+  "jobs": {
+    "state": {
+      "title": "accidents per state",
+      "keys_pandas": 49,
+      "keys_mapreduce": 49,
+      "keys_mongodb": 49,
+      "mismatches": 0,
+      "status": "PASS"
+    },
+    "weather": {
+      "title": "average severity per weather group",
+      "keys_pandas": 7,
+      "keys_mapreduce": 7,
+      "keys_mongodb": 7,
+      "mismatches": 0,
+      "status": "PASS"
+    },
+    "hour": {
+      "title": "accidents per hour",
+      "keys_pandas": 24,
+      "keys_mapreduce": 24,
+      "keys_mongodb": 24,
+      "mismatches": 0,
+      "status": "PASS"
+    }
+  },
+  "all_pass": true,
+  "values_compared": 80,
+  "tolerance_avg": 1e-06,
+  "details": [
+    {
+      "job": "accidents per state",
+      "key": "AL",
+      "pandas": 5394.0,
+      "mapreduce": 5394.0,
+      "mongodb": 5394.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "AR",
+      "pandas": 1221.0,
+      "mapreduce": 1221.0,
+      "mongodb": 1221.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "AZ",
+      "pandas": 8756.0,
+      "mapreduce": 8756.0,
+      "mongodb": 8756.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "CA",
+      "pandas": 89890.0,
+      "mapreduce": 89890.0,
+      "mongodb": 89890.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "CO",
+      "pandas": 4700.0,
+      "mapreduce": 4700.0,
+      "mongodb": 4700.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "CT",
+      "pandas": 3674.0,
+      "mapreduce": 3674.0,
+      "mongodb": 3674.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "DC",
+      "pandas": 967.0,
+      "mapreduce": 967.0,
+      "mongodb": 967.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "DE",
+      "pandas": 778.0,
+      "mapreduce": 778.0,
+      "mongodb": 778.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "FL",
+      "pandas": 45340.0,
+      "mapreduce": 45340.0,
+      "mongodb": 45340.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "GA",
+      "pandas": 8757.0,
+      "mapreduce": 8757.0,
+      "mongodb": 8757.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "IA",
+      "pandas": 1408.0,
+      "mapreduce": 1408.0,
+      "mongodb": 1408.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "ID",
+      "pandas": 642.0,
+      "mapreduce": 642.0,
+      "mongodb": 642.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "IL",
+      "pandas": 8736.0,
+      "mapreduce": 8736.0,
+      "mongodb": 8736.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "IN",
+      "pandas": 3515.0,
+      "mapreduce": 3515.0,
+      "mongodb": 3515.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "KS",
+      "pandas": 1106.0,
+      "mapreduce": 1106.0,
+      "mongodb": 1106.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "KY",
+      "pandas": 1680.0,
+      "mapreduce": 1680.0,
+      "mongodb": 1680.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "LA",
+      "pandas": 7498.0,
+      "mapreduce": 7498.0,
+      "mongodb": 7498.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "MA",
+      "pandas": 3197.0,
+      "mapreduce": 3197.0,
+      "mongodb": 3197.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "MD",
+      "pandas": 7331.0,
+      "mapreduce": 7331.0,
+      "mongodb": 7331.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "ME",
+      "pandas": 142.0,
+      "mapreduce": 142.0,
+      "mongodb": 142.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "MI",
+      "pandas": 8375.0,
+      "mapreduce": 8375.0,
+      "mongodb": 8375.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "MN",
+      "pandas": 10041.0,
+      "mapreduce": 10041.0,
+      "mongodb": 10041.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "MO",
+      "pandas": 3996.0,
+      "mapreduce": 3996.0,
+      "mongodb": 3996.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "MS",
+      "pandas": 829.0,
+      "mapreduce": 829.0,
+      "mongodb": 829.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "MT",
+      "pandas": 1465.0,
+      "mapreduce": 1465.0,
+      "mongodb": 1465.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "NC",
+      "pandas": 17477.0,
+      "mapreduce": 17477.0,
+      "mongodb": 17477.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "ND",
+      "pandas": 167.0,
+      "mapreduce": 167.0,
+      "mongodb": 167.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "NE",
+      "pandas": 1478.0,
+      "mapreduce": 1478.0,
+      "mongodb": 1478.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "NH",
+      "pandas": 525.0,
+      "mapreduce": 525.0,
+      "mongodb": 525.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "NJ",
+      "pandas": 7390.0,
+      "mapreduce": 7390.0,
+      "mongodb": 7390.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "NM",
+      "pandas": 536.0,
+      "mapreduce": 536.0,
+      "mongodb": 536.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "NV",
+      "pandas": 1171.0,
+      "mapreduce": 1171.0,
+      "mongodb": 1171.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "NY",
+      "pandas": 18112.0,
+      "mapreduce": 18112.0,
+      "mongodb": 18112.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "OH",
+      "pandas": 6091.0,
+      "mapreduce": 6091.0,
+      "mongodb": 6091.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "OK",
+      "pandas": 4336.0,
+      "mapreduce": 4336.0,
+      "mongodb": 4336.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "OR",
+      "pandas": 9234.0,
+      "mapreduce": 9234.0,
+      "mongodb": 9234.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "PA",
+      "pandas": 15178.0,
+      "mapreduce": 15178.0,
+      "mongodb": 15178.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "RI",
+      "pandas": 899.0,
+      "mapreduce": 899.0,
+      "mongodb": 899.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "SC",
+      "pandas": 19602.0,
+      "mapreduce": 19602.0,
+      "mongodb": 19602.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "SD",
+      "pandas": 19.0,
+      "mapreduce": 19.0,
+      "mongodb": 19.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "TN",
+      "pandas": 8648.0,
+      "mapreduce": 8648.0,
+      "mongodb": 8648.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "TX",
+      "pandas": 30284.0,
+      "mapreduce": 30284.0,
+      "mongodb": 30284.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "UT",
+      "pandas": 5048.0,
+      "mapreduce": 5048.0,
+      "mongodb": 5048.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "VA",
+      "pandas": 15631.0,
+      "mapreduce": 15631.0,
+      "mongodb": 15631.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "VT",
+      "pandas": 43.0,
+      "mapreduce": 43.0,
+      "mongodb": 43.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "WA",
+      "pandas": 5572.0,
+      "mapreduce": 5572.0,
+      "mongodb": 5572.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "WI",
+      "pandas": 1791.0,
+      "mapreduce": 1791.0,
+      "mongodb": 1791.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "WV",
+      "pandas": 723.0,
+      "mapreduce": 723.0,
+      "mongodb": 723.0,
+      "match": true
+    },
+    {
+      "job": "accidents per state",
+      "key": "WY",
+      "pandas": 188.0,
+      "mapreduce": 188.0,
+      "mongodb": 188.0,
+      "match": true
+    },
+    {
+      "job": "average severity per weather group",
+      "key": "Clear",
+      "pandas": 2.187721,
+      "mapreduce": 2.187721,
+      "mongodb": 2.187721,
+      "match": true
+    },
+    {
+      "job": "average severity per weather group",
+      "key": "Cloudy",
+      "pandas": 2.235008,
+      "mapreduce": 2.235008,
+      "mongodb": 2.235008,
+      "match": true
+    },
+    {
+      "job": "average severity per weather group",
+      "key": "Fog/Haze",
+      "pandas": 2.17508,
+      "mapreduce": 2.17508,
+      "mongodb": 2.17508,
+      "match": true
+    },
+    {
+      "job": "average severity per weather group",
+      "key": "Other",
+      "pandas": 2.097561,
+      "mapreduce": 2.097561,
+      "mongodb": 2.097561,
+      "match": true
+    },
+    {
+      "job": "average severity per weather group",
+      "key": "Rain",
+      "pandas": 2.249121,
+      "mapreduce": 2.249121,
+      "mongodb": 2.249121,
+      "match": true
+    },
+    {
+      "job": "average severity per weather group",
+      "key": "Snow",
+      "pandas": 2.240933,
+      "mapreduce": 2.240933,
+      "mongodb": 2.240933,
+      "match": true
+    },
+    {
+      "job": "average severity per weather group",
+      "key": "Storm",
+      "pandas": 2.220697,
+      "mapreduce": 2.220697,
+      "mongodb": 2.220697,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "00",
+      "pandas": 5881.0,
+      "mapreduce": 5881.0,
+      "mongodb": 5881.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "01",
+      "pandas": 5004.0,
+      "mapreduce": 5004.0,
+      "mongodb": 5004.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "02",
+      "pandas": 4693.0,
+      "mapreduce": 4693.0,
+      "mongodb": 4693.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "03",
+      "pandas": 4344.0,
+      "mapreduce": 4344.0,
+      "mongodb": 4344.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "04",
+      "pandas": 8227.0,
+      "mapreduce": 8227.0,
+      "mongodb": 8227.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "05",
+      "pandas": 11858.0,
+      "mapreduce": 11858.0,
+      "mongodb": 11858.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "06",
+      "pandas": 20858.0,
+      "mapreduce": 20858.0,
+      "mongodb": 20858.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "07",
+      "pandas": 30549.0,
+      "mapreduce": 30549.0,
+      "mongodb": 30549.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "08",
+      "pandas": 30048.0,
+      "mapreduce": 30048.0,
+      "mongodb": 30048.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "09",
+      "pandas": 18720.0,
+      "mapreduce": 18720.0,
+      "mongodb": 18720.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "10",
+      "pandas": 17789.0,
+      "mapreduce": 17789.0,
+      "mongodb": 17789.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "11",
+      "pandas": 18186.0,
+      "mapreduce": 18186.0,
+      "mongodb": 18186.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "12",
+      "pandas": 18485.0,
+      "mapreduce": 18485.0,
+      "mongodb": 18485.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "13",
+      "pandas": 20497.0,
+      "mapreduce": 20497.0,
+      "mongodb": 20497.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "14",
+      "pandas": 23237.0,
+      "mapreduce": 23237.0,
+      "mongodb": 23237.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "15",
+      "pandas": 27369.0,
+      "mapreduce": 27369.0,
+      "mongodb": 27369.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "16",
+      "pandas": 30114.0,
+      "mapreduce": 30114.0,
+      "mongodb": 30114.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "17",
+      "pandas": 29668.0,
+      "mapreduce": 29668.0,
+      "mongodb": 29668.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "18",
+      "pandas": 22184.0,
+      "mapreduce": 22184.0,
+      "mongodb": 22184.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "19",
+      "pandas": 15298.0,
+      "mapreduce": 15298.0,
+      "mongodb": 15298.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "20",
+      "pandas": 11536.0,
+      "mapreduce": 11536.0,
+      "mongodb": 11536.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "21",
+      "pandas": 9811.0,
+      "mapreduce": 9811.0,
+      "mongodb": 9811.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "22",
+      "pandas": 8668.0,
+      "mapreduce": 8668.0,
+      "mongodb": 8668.0,
+      "match": true
+    },
+    {
+      "job": "accidents per hour",
+      "key": "23",
+      "pandas": 6557.0,
+      "mapreduce": 6557.0,
+      "mongodb": 6557.0,
+      "match": true
+    }
+  ]
+}

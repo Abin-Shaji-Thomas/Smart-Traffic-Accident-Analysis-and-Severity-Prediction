@@ -13,5 +13,3 @@ __pycache__/
 .pytest_cache/
 logs/
 *.log
-# model file is ignored only while it is over 50 MB (rebuild with scripts/train_final.py)
-models/best_model.joblib

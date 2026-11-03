@@ -1,4 +1,5 @@
-model,n_iter,best_cv_macro_f1,best_params,search_seconds
-Decision Tree,15,0.3435,"{""criterion"": ""entropy"", ""max_depth"": 26, ""min_samples_leaf"": 2}",54.1
-Random Forest,8,0.3753,"{""max_depth"": 17, ""max_features"": 0.3, ""min_samples_leaf"": 1, ""n_estimators"": 150}",286.7
-Logistic Regression,6,0.2587,"{""C"": 56.69849511478853}",73.4
+model,n_iter,cv_folds,best_cv_macro_f1,best_params,search_seconds
+Decision Tree,15,3,0.3435,"{""criterion"": ""entropy"", ""max_depth"": 26, ""min_samples_leaf"": 2}",107.2
+Random Forest,8,3,0.3753,"{""max_depth"": 17, ""max_features"": 0.3, ""min_samples_leaf"": 1, ""n_estimators"": 150}",323.1
+Logistic Regression,6,3,0.2587,"{""C"": 4.5705630998014515}",122.1
+HistGradientBoosting,8,3,0.3714,"{""l2_regularization"": 0.06672367170464207, ""learning_rate"": 0.18293517328594538, ""max_iter"": 400, ""max_leaf_nodes"": 122, ""min_samples_leaf"": 74}",514.4

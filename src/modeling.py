@@ -7,8 +7,8 @@ https://github.com/rit-vik/Accident-Severity-Prediction-and-Hotspot-Analysis-of-
 Reused from upstream: the feature list (location, weather, time, road flags, State, weather group, Day/Night,
 wind direction), the leakage rule (no duration/Distance/year), the majority baseline and the inverse-vs-sqrt
 class-weighting comparison. Re-expressed in scikit-learn (upstream used Spark MLlib StringIndexer/OneHotEncoder/
-VectorAssembler). Added: Decision Tree, City frequency + top-N encoding, stratified split, randomized search,
-ROC-AUC, cross-validation.
+VectorAssembler). Added: Decision Tree and HistGradientBoosting, City frequency + top-N encoding, stratified split,
+randomized search, ROC-AUC, cross-validation, permutation importance.
 """
 from __future__ import annotations
 
@@ -16,12 +16,15 @@ import numpy as np
 import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.compose import ColumnTransformer
+from sklearn.ensemble import HistGradientBoostingClassifier, RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import (accuracy_score, balanced_accuracy_score, confusion_matrix, f1_score,
                              precision_recall_fscore_support, roc_auc_score)
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
-from .utils import ROAD_FEATURES
+from .utils import RANDOM_STATE, ROAD_FEATURES
 
 NUM_FEATURES = ["Start_Lat", "Start_Lng", "Temperature(F)", "Humidity(%)", "Pressure(in)", "Visibility(mi)",
                 "Wind_Speed(mph)", "Precipitation(in)", "Hour", "DayOfWeek", "Month", "IsWeekend", "IsRushHour",
@@ -31,6 +34,8 @@ CAT_FEATURES = ["State", "WeatherGroup", "DayNight", "Wind_Direction"]
 CITY = "City"
 DISTANCE = "Distance(mi)"
 LABELS = [1, 2, 3, 4]
+MODEL_NAMES = ["Decision Tree", "Random Forest", "Logistic Regression", "HistGradientBoosting"]
+SCALED = {"Logistic Regression"}   # only the linear model needs standardised inputs
 
 
 class CityEncoder(BaseEstimator, TransformerMixin):
@@ -72,6 +77,28 @@ def make_preprocessor(with_distance: bool, scale: bool) -> ColumnTransformer:
 
 def make_pipeline(model, with_distance: bool, scale: bool) -> Pipeline:
     return Pipeline([("prep", make_preprocessor(with_distance, scale)), ("model", model)])
+
+
+def make_model(name: str, params: dict | None = None):
+    """Unfitted estimator with class_weight='balanced' and random_state=42 (where supported)."""
+    params = dict(params or {})
+    if name == "Decision Tree":
+        return DecisionTreeClassifier(class_weight="balanced", random_state=RANDOM_STATE, **params)
+    if name == "Random Forest":
+        return RandomForestClassifier(class_weight="balanced", n_jobs=-1, random_state=RANDOM_STATE, **params)
+    if name == "Logistic Regression":
+        return LogisticRegression(class_weight="balanced", max_iter=1000, **params)
+    if name == "HistGradientBoosting":
+        return HistGradientBoostingClassifier(class_weight="balanced", random_state=RANDOM_STATE, **params)
+    raise ValueError(name)
+
+
+def build_pipeline(name: str, params: dict | None = None, with_distance: bool = False) -> Pipeline:
+    return make_pipeline(make_model(name, params), with_distance, scale=name in SCALED)
+
+
+def slug(name: str) -> str:
+    return name.lower().replace(" ", "_")
 
 
 def sqrt_balanced_weights(y) -> np.ndarray:

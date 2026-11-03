@@ -1,0 +1,76 @@
+{
+  "input": "bigdata/hadoop_mapreduce/input/accidents.tsv",
+  "input_lines_including_header": 399582,
+  "partitioner": "zlib.crc32(key) % 2",
+  "jobs": {
+    "state": {
+      "splits": 4,
+      "map_tasks": 4,
+      "map_input_records": 399581,
+      "map_input_records_per_split": [
+        99895,
+        99896,
+        99896,
+        99894
+      ],
+      "map_output_records": 399581,
+      "partitions": 2,
+      "reduce_tasks": 2,
+      "partition_records": [
+        137449,
+        262132
+      ],
+      "reduce_input_groups": 49,
+      "reduce_output_records": 49,
+      "user_counters": {},
+      "output": "bigdata/hadoop_mapreduce/output/state.tsv",
+      "seconds": 0.61
+    },
+    "weather": {
+      "splits": 4,
+      "map_tasks": 4,
+      "map_input_records": 399581,
+      "map_input_records_per_split": [
+        99895,
+        99896,
+        99896,
+        99894
+      ],
+      "map_output_records": 399581,
+      "partitions": 2,
+      "reduce_tasks": 2,
+      "partition_records": [
+        359270,
+        40311
+      ],
+      "reduce_input_groups": 7,
+      "reduce_output_records": 7,
+      "user_counters": {},
+      "output": "bigdata/hadoop_mapreduce/output/weather.tsv",
+      "seconds": 0.6
+    },
+    "hour": {
+      "splits": 4,
+      "map_tasks": 4,
+      "map_input_records": 399581,
+      "map_input_records_per_split": [
+        99895,
+        99896,
+        99896,
+        99894
+      ],
+      "map_output_records": 399581,
+      "partitions": 2,
+      "reduce_tasks": 2,
+      "partition_records": [
+        215650,
+        183931
+      ],
+      "reduce_input_groups": 24,
+      "reduce_output_records": 24,
+      "user_counters": {},
+      "output": "bigdata/hadoop_mapreduce/output/hour.tsv",
+      "seconds": 0.62
+    }
+  }
+}
