@@ -1,0 +1,16 @@
+# data (raw dataset and generated intermediates are never committed)
+data/raw/
+data/processed/
+bigdata/hadoop_mapreduce/input/
+bigdata/hadoop_mapreduce/output/
+# secrets / environments
+.env
+.venv/
+# python / jupyter clutter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+logs/
+*.log
+# large model files (>50 MB are kept local)
+models/
