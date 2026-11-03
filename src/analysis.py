@@ -1,4 +1,4 @@
-"""Aggregations used by EDA, MapReduce/MongoDB cross-checks and Power BI exports.
+"""Aggregations used by EDA, MapReduce/MongoDB cross-checks and the dashboard.
 
 Author: Abin Shaji Thomas
 Adapted from src/analysis.py of

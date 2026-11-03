@@ -19,7 +19,6 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_RAW = ROOT / "data" / "raw" / "US_Accidents_March23.csv"
 DATA_PROCESSED = ROOT / "data" / "processed"
 DATA_SAMPLE = ROOT / "data" / "sample"
-DATA_POWERBI = ROOT / "data" / "powerbi"
 FIGURES = ROOT / "reports" / "figures"
 MAPS = ROOT / "reports" / "maps"
 METRICS = ROOT / "reports" / "metrics"
@@ -42,7 +41,7 @@ WEATHER_GROUPS = ["Clear", "Cloudy", "Rain", "Snow", "Fog/Haze", "Storm", "Other
 
 
 def ensure_dirs() -> None:
-    for p in (DATA_PROCESSED, DATA_SAMPLE, DATA_POWERBI, FIGURES, MAPS, METRICS, MODELS):
+    for p in (DATA_PROCESSED, DATA_SAMPLE, FIGURES, MAPS, METRICS, MODELS):
         p.mkdir(parents=True, exist_ok=True)
 
 

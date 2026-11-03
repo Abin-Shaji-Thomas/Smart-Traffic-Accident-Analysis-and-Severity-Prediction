@@ -2,6 +2,7 @@
 """Create poster/poster_facts.json from the real result files in reports/metrics/ (Abin Shaji Thomas).
 
 Every number and every insight sentence is read or built from those files - nothing is typed by hand.
+The output follows the schema in poster/poster_facts.template.json (plus captions, date range and raw size).
 Model rows are the leakage-free runs (without Distance) plus the majority-class baseline.
 
 Usage (from the repo root):  python poster/make_poster_facts.py [--root .]

@@ -287,7 +287,7 @@ alerts; probability calibration for the predictor.
 * HistGradientBoosting (scikit-learn) is used instead of Gradient Boosting / XGBoost.
 * `Distance(mi)` is excluded from the headline models (post-event leakage); runs with it are reported separately.
 * A Hadoop / MapReduce data flow was added (local split-map-shuffle-sort-reduce with real counters).
-* Power BI was replaced by the Streamlit dashboard plus `reports/figures/dashboard_overview.png`.
+* The desktop BI-tool dashboard named in the problem statement was replaced by the Streamlit dashboard plus `reports/figures/dashboard_overview.png`.
 * The verified dataset period is 2016-01-14 to 2023-03-31 (`dataset_profile.json`).
 
 ## 14. Figures, maps and tables

@@ -45,7 +45,7 @@
   "images": {
     "heatmap": "poster/assets/heatmap.png",
     "timeseries": "poster/assets/timeseries.png",
-    "powerbi": "poster/assets/powerbi.png"
+    "dashboard": "poster/assets/streamlit.png"
   },
   "team": [
     {
