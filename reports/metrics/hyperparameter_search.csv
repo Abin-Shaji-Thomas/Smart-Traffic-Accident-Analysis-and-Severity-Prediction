@@ -1,0 +1,4 @@
+model,n_iter,best_cv_macro_f1,best_params,search_seconds
+Decision Tree,15,0.3435,"{""criterion"": ""entropy"", ""max_depth"": 26, ""min_samples_leaf"": 2}",54.1
+Random Forest,8,0.3753,"{""max_depth"": 17, ""max_features"": 0.3, ""min_samples_leaf"": 1, ""n_estimators"": 150}",286.7
+Logistic Regression,6,0.2587,"{""C"": 56.69849511478853}",73.4

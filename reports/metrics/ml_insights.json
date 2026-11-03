@@ -1,0 +1,7 @@
+{
+  "best": "Random Forest has the best macro-F1 (0.375, accuracy 0.595) vs the majority baseline (0.222 macro-F1, 0.797 accuracy).",
+  "distance": "Adding Distance(mi) changes Random Forest's macro-F1 from 0.375 to 0.421.",
+  "weights": "For Logistic Regression, sqrt weights give accuracy 0.768 / macro-F1 0.350 vs inverse 0.375 / 0.261.",
+  "top_feature": "Most important Random Forest feature: City_freq (0.110), then Month (0.106).",
+  "cv": "5-fold CV macro-F1 of Random Forest: 0.374 +/- 0.001."
+}
